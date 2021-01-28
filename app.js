@@ -15,5 +15,5 @@ const routes = require('./routers/post.js');
 app.use(routes);
 
 mongoConnect(()=>{
-  app.listen(3000);
+  app.listen(process.env.PORT || 3000);
 });
