@@ -1,0 +1,11 @@
+extends layouts/main-layout.pug
+block styles
+  link(rel="stylesheet" href="/css/style.css" type='text/css')
+block content
+  include ./includes/navbar.pug
+  .container
+    h1(style="display:inline-block;") #{post.subject}
+    span(style="margin-left:10px;") by 
+    span(style="font-size:18px; margin-left:5px; font-style:italic;") #{post.author}
+    hr
+    p(style="padding:1% 5%;") #{post.text}

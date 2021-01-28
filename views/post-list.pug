@@ -1,0 +1,19 @@
+extends layouts/main-layout.pug
+block styles
+  link(rel="stylesheet" href="/css/style.css" type='text/css')
+  link(rel="stylesheet" href="/css/post-list.css" type='text/css')
+block content
+  head
+  include ./includes/navbar.pug
+  .container
+    table
+      tr
+        th.baslik.subject Subject
+        th.baslik.author Author
+        th.baslik.time Post Time 
+      each post in posts
+        tr(style=(post.number%2===0?'background-color:#B3CFCE;':'background-color:#e6f5f4;'))
+          td
+            a(class="subject-link" href=`/posts/${post._id}`) #{post.subject}
+          td #{post.author}
+          td #{post.time} ago

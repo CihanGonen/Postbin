@@ -1,0 +1,30 @@
+body{
+  background-color:darkslategrey;
+  margin:0;
+  border:0;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.container{
+  width:80%;
+  padding:1% 5%;
+  margin:0 auto;
+  margin-top:6%;
+  background-color:lightslategrey;
+}
+table{
+  width:100%;
+  border:1px solid #ddd;
+}
+.subject{
+  width:50%;
+}
+.time{
+  width:20%;
+}
+.baslik{
+  text-align:left;
+}
+td,th{
+  border:1px solid #ddd;
+  padding:1%;
+}

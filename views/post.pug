@@ -1,0 +1,17 @@
+extends layouts/main-layout.pug
+block styles
+  link(rel="stylesheet" href="/css/style.css" type='text/css')
+block content
+  include ./includes/navbar.pug
+  .container
+    h1 POST Your Post
+    if(action !== 'undefined' && action==='insert')
+      h4(style=" background-color:#4caf50; color:white; width:'100%'; padding:1%;") your post has been posted successfully
+    form(action="/" method="POST")
+      label(for="subject") Subject
+      input.short-input.subject-input(type="text" name="subject")#subject
+      input.buton(type="submit" value="POST")
+      label(for="author") Author
+      input.short-input.author-input(type="text" name="author")#author
+      label(for="text") Your Post
+      textarea.post-input(name="text" rows="12")#text
