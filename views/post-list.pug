@@ -12,8 +12,8 @@ block content
         th.baslik.author Author
         th.baslik.time Post Time 
       each post in posts
-        tr(style=(post.number%2===0?'background-color:#B3CFCE;':'background-color:#e6f5f4;'))
+        tr(style=(post.number == 0 ?'background-color:#B3CFCE;':'background-color:#e6f5f4;'))
           td
             a(class="subject-link" href=`/posts/${post._id}`) #{post.subject}
           td #{post.author}
-          td #{post.time} ago
+          td #{post.age} ago
